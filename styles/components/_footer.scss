@@ -1,0 +1,33 @@
+@use "../utils/_mixins" as mix;
+@use "../utils/_variables" as vars;
+
+.mon-footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    z-index: 10;
+    text-align: center;
+    font-family: vars.$ff2;
+    color: vars.$clr1;
+    background-color: vars.$clr-bg1;
+    font-size: 0.8rem;
+    @include mix.grid-layout ($columns: repeat(3, auto), $align: center);
+    align-content: center;
+
+    a {
+        @include mix.link-1;
+        @include mix.hover-effect;
+        padding: 0 1.2rem;
+    }
+
+    .f1 {
+        opacity: 0.6;
+    }
+}
+
+.f2,
+.f3 {
+    font-size: clamp(0.9rem, 2vw, 1.2rem);
+}

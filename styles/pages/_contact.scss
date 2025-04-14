@@ -1,0 +1,102 @@
+@use "../utils/_variables" as vars;
+@use "../utils/_mixins" as mix;
+
+.contact-page {
+    background: linear-gradient(to bottom right, vars.$c-grad3 20%, vars.$c-grad4 100%);
+    @include mix.basic;
+
+    @media screen and (min-width: vars.$small) {
+        margin: 0 1.5rem;
+    }
+}
+
+.main-contact {
+    @include mix.basic-layout;
+    @include mix.grid-layout($columns: 3fr 2fr);
+}
+
+.contact-intro {
+    grid-row: 1/2;
+    grid-column: 1 / span 2;
+
+    @media screen and (min-width: vars.$width3) {
+        grid-row: 2/3;
+        grid-column: 2/3;
+        margin-right: 15%;
+    }
+
+    p {
+        padding: 2rem;
+        font-size: clamp(0.8rem, 2.6vw, 2rem);
+        opacity: 0.7;
+
+        @media screen and (min-width: vars.$width2) and (max-width: vars.$width3) {
+            padding: 2rem 5rem;
+            font-size: clamp(0.8rem, 2vw, 2rem);
+        }
+
+        @media screen and (min-width: vars.$width3) {
+            padding: 3rem 0;
+            font-size: clamp(0.8rem, 1.6vw, 2rem);
+            opacity: 0.6;
+        }
+    }
+}
+
+.contact-title {
+    grid-row: 2/3;
+    grid-column: 1 / span 2;
+
+    @media screen and (min-width: vars.$width3) {
+        grid-row: 1/2;
+        grid-column: 1 / span 2;
+        margin-top: 2%;
+    }
+
+    p {
+        text-align: center;
+        font-family: vars.$ff3;
+        font-size: clamp(1rem, 3.2vw, 2.2rem);
+    }
+}
+
+.zone-carousel {
+    grid-row: 3/4;
+    grid-column: 1/2;
+    margin: auto;
+
+    @media screen and (min-width: vars.$small) {
+        padding: 0 4vw;
+    }
+
+    @media screen and (min-width: vars.$width3) {
+        grid-row: 2/3;
+        grid-column: 1/2;
+        padding: 0 5%;
+    }
+}
+
+.realisations {
+    grid-row: 4/5;
+    grid-column: 1 / span 2;
+    padding: 1rem;
+    margin: auto;
+
+    @media screen and (min-width: vars.$width3) {
+        grid-row: 3/4;
+        grid-column: 1/ span 2;
+    }
+}
+
+.Btn-realisations {
+    @include mix.styleBtn;
+    @include mix.Btn-hover;
+
+    a {
+        @include mix.Btn-link;
+    }
+}
+
+.text-realisations {
+    @include mix.textBtn;
+}

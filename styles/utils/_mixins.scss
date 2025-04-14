@@ -1,0 +1,122 @@
+@use "_variables" as vars;
+
+// MIXINS :
+
+@mixin link-1 {
+    color: vars.$clr1;
+    text-decoration: none;
+    font-family: vars.$ff2;
+}
+
+@mixin basic {
+    background-attachment: fixed;
+    background-size: cover;
+    height: 100vh;
+    font-family: vars.$ff1;
+    color: vars.$clr2;
+}
+
+@mixin basic-layout {
+    margin: 60px 0 40px;
+    padding: 2rem 2rem 3rem;
+    overflow-y: auto;
+    min-height: calc(100vh - 100px);
+}
+
+@mixin list-disc-inside {
+    list-style: disc;
+    list-style-position: inside;
+    line-height: 1.4;
+}
+
+// Flexbox :
+@mixin flex-center($direction: row, $justify: space-between, $align: center) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+// Grid-layout :
+@mixin grid-layout($columns: repeat(3, 1fr),
+    $rows: max-content,
+    $gap: 0,
+    $align: stretch,
+    $justify: stretch,
+    $flow: row) {
+    display: grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    gap: $gap;
+    align-items: $align;
+    justify-items: $justify;
+    grid-auto-flow: $flow;
+}
+
+
+// Effects :
+@mixin hover-effect {
+    &:hover {
+        text-decoration: underline;
+        font-weight: bold;
+    }
+}
+
+@mixin hover-effect-2 {
+    &:hover {
+        text-decoration: underline;
+        font-weight: bold;
+        color: vars.$clr2;
+    }
+}
+
+@mixin hover-effect-scale($scale) {
+    &:hover {
+        transform: scale($scale);
+        transition: transform 0.3s ease-in-out;
+    }
+}
+
+@mixin hover-effect-sans {
+    &:hover {
+        text-decoration: none;
+        font-weight: 600;
+    }
+}
+
+@mixin Btn-hover {
+    &:hover {
+        background-color: vars.$clr5;
+        font-weight: 600;
+    }
+}
+
+@mixin Btn-active {
+    &:active {
+        background-color: vars.$clr5;
+        border: solid 2.6px vars.$clr4;
+    }
+}
+
+// Boutons :
+@mixin styleBtn {
+    display: inline-block;
+    text-align: center;
+    position: relative;
+    cursor: pointer;
+    background-color: vars.$clr6;
+    box-shadow: vars.$shadow2;
+    border-radius: 25px;
+    border: solid 1.2px vars.$clr4;
+}
+
+@mixin textBtn {
+    padding: 1rem;
+    font-size: clamp(1rem, 3vw, 1.8rem);
+    font-family: vars.$ff2;
+}
+
+@mixin Btn-link {
+    text-decoration: none;
+    color: vars.$clr2;
+}

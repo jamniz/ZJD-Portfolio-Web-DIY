@@ -1,0 +1,21 @@
+@use "../utils/_mixins" as mix;
+@use "../utils/_variables" as vars;
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background-color: vars.$clr-bg1;
+    color: vars.$clr1;
+    padding: 0 1rem;
+    z-index: 10;
+    @include mix.flex-center($justify: space-around);
+
+    a {
+        @include mix.link-1;
+        @include mix.hover-effect;
+        font-size: clamp(0.9rem, 2vw, 1.6rem);
+    }
+}

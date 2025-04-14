@@ -1,0 +1,121 @@
+@use "../utils/_mixins" as mix;
+@use "../utils/_variables" as vars;
+
+$pause-duration: 2s;
+$animation-timing: 15s; // Durée totale de l'animation (3s par carte)
+$carousel-items: 3; // Nombre total de cartes
+$animation-delay-fraction: $animation-timing / $carousel-items;
+$animation-steps-fraction: 100 / $carousel-items;
+$pause-percentage: (
+    $pause-duration / $animation-timing) * 100;
+
+
+.carousel {
+    position: relative;
+    height: 25vh;
+    width: 80vw;
+    @include mix.flex-center(column, center
+);
+overflow: hidden;
+
+@media screen and (min-width: vars.$small) {
+    width: 60vw;
+}
+
+@media screen and (min-width: vars.$width3) {
+    width: 40vw;
+}
+}
+
+.carousel-item {
+    position: absolute;
+    width: 75%;
+    height: 10vh;
+    border-radius: 25px;
+    box-shadow: vars.$shadow3;
+    font-weight: 600;
+    text-align: center;
+    padding-top: 1vh;
+    @include mix.flex-center($justify: center);
+    gap: 4%;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+    animation-play-state: running; // Par défaut
+
+    @media screen and (min-width: vars.$small) {
+        width: 70%;
+    }
+
+    @media screen and (min-width: vars.$width2) {
+        height: 12vh;
+    }
+
+    @media screen and (min-width: vars.$width3) {
+        width: 50%;
+    }
+
+    &:hover {
+        border: 3px solid vars.$clr2;
+        transition: border 0.3s ease;
+    }
+
+    .carousel.paused .carousel-item {
+        animation-play-state: paused;
+    }
+}
+
+.imgIn {
+    width: 30%;
+}
+
+.git-img {
+    width: 10%;
+}
+
+.mail {
+    width: 13%;
+}
+
+.t2,
+.t3 {
+    font-size: clamp(1rem, 2.4vw, 2.2rem);
+
+    @media screen and (min-width: vars.$width3) {
+        font-size: clamp(1rem, 1.6vw, 2rem);
+    }
+}
+
+@keyframes carousel-animate {
+    0% {
+        transform: translateY(100%) scale(0.5);
+        opacity: 0;
+    }
+
+    33.33% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    #{33.33% + $pause-percentage} {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+
+    66.66% {
+        transform: translateY(-100%) scale(0.5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(-100%) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@for $i from 1 through $carousel-items {
+    .carousel-item:nth-child(#{$i}) {
+        animation: carousel-animate $animation-timing linear infinite;
+        animation-delay: calc(#{$animation-delay-fraction} * (#{$i - 1}));
+    }
+}

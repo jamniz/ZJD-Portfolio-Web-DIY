@@ -1,0 +1,187 @@
+@use "../utils/_variables" as vars;
+@use "../utils/_mixins" as mix;
+
+.projets-page {
+    @include mix.basic;
+    background: linear-gradient(to bottom right, vars.$c-grad5 0%, vars.$c-grad6 100%);
+}
+
+.main-projets {
+    @include mix.basic-layout;
+    @include mix.grid-layout($columns: 1fr);
+}
+
+.projets-title {
+    grid-row: 1/2;
+    display: block;
+    padding: 1.5rem 4rem;
+    margin: auto;
+
+    p {
+        font-family: vars.$ff3;
+        font-size: clamp(1rem, 3.6vw, 2.6rem);
+    }
+}
+
+.mon-github {
+    grid-row: 2/3;
+    margin: auto;
+    padding: 2rem;
+}
+
+.Btn-to-github {
+    @include mix.styleBtn;
+    @include mix.Btn-hover;
+
+    a {
+        @include mix.Btn-link;
+    }
+}
+
+.text-gth {
+    @include mix.textBtn;
+}
+
+.expo-realisations {
+    grid-row: 3/4;
+    @include mix.grid-layout($columns: 1fr, $rows: auto, $gap: 5%);
+    margin: 2rem 0 2rem;
+    padding-bottom: 10%;
+
+    @media screen and (min-width: vars.$small) {
+        margin: 2rem clamp(1.5rem, 10vw, 6rem);
+    }
+
+    @media screen and (min-width: vars.$width3) and (max-width: vars.$width4) {
+        grid-column: 1 / span 2;
+        @include mix.grid-layout($columns: repeat(2, 1fr), $gap: 5%);
+    }
+
+    @media screen and (min-width: vars.$width4) {
+        grid-column: 1 / span 3;
+        @include mix.grid-layout($gap: 5%)
+    }
+}
+
+.pr-expo-1,
+.pr-expo-2 {
+    @include mix.grid-layout($columns: 1fr);
+    border-radius: 15px 40px 15px 40px;
+    padding: 1.2rem;
+    background-color: vars.$clr7;
+    box-shadow: vars.$shadow4;
+    line-height: 1.4;
+
+    @media screen and (min-width: vars.$width3) {
+        border-radius: 50px;
+        box-shadow: vars.$shadow5;
+        padding: 2.2rem;
+    }
+}
+
+.pr-expo-1 {
+    @media screen and (min-width: vars.$width3) {
+        grid-column: 1/2;
+        grid-row: 4/5;
+    }
+}
+
+.pr-expo-2 {
+    @media screen and (min-width: vars.$width3) {
+        grid-column: 2/3;
+        grid-row: 4/5;
+    }
+}
+
+.expo1-part1,
+.expo2-part1 {
+    @include mix.grid-layout($columns: 2fr 3fr, $align: center);
+
+    @media screen and (min-width: vars.$width3) {
+        @include mix.grid-layout($columns: 1fr)
+    }
+}
+
+.expo1-bloc1 {
+    grid-column: 1/2;
+}
+
+.expo1-bloc2 {
+    grid-column: 2/3;
+
+    @media screen and (min-width: vars.$width3) {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+}
+
+.expo1-part2,
+.expo2-part2 {
+    grid-row: 2/3;
+    align-self: end;
+}
+
+.pr-expo-1a,
+.pr-expo-2a {
+    font-size: clamp(1rem, 3vw, 2.4rem);
+    padding-top: 6%;
+    font-family: vars.$ff3;
+
+    a {
+        color: vars.$clr2;
+        @include mix.hover-effect-sans
+    }
+
+}
+
+.pr-expo-1f,
+.pr-expo-2f {
+    font-size: clamp(0.7rem, 1.6vw, 1.8rem);
+    opacity: 0.7;
+    padding-top: 6%;
+
+    @media screen and (min-width: vars.$width3) {
+        font-size: clamp(0.7rem, 1.4vw, 1.6rem);
+        opacity: 0.7;
+    }
+}
+
+.pr-expo-1b,
+.pr-expo-2b {
+    padding-top: 2%;
+    font-size: clamp(0.9rem, 2.6vw, 1.6rem);
+}
+
+.info-pr1,
+.info-pr2 {
+    padding-top: 2%;
+    font-size: clamp(0.9rem, 2.8vw, 1.8rem);
+    line-height: 1.4;
+
+    @media screen and (min-width: vars.$width1) and (max-width: vars.$width3) {
+        font-size: clamp(0.9rem, 2.2vw, 1.6rem);
+    }
+
+    @media screen and (min-width: vars.$width3) {
+        font-size: clamp(0.9rem, 1.4vw, 1.4rem);
+    }
+}
+
+.pr-expo-1c,
+.pr-expo-2c {
+    padding-top: 3%;
+}
+
+.sum-pr1,
+.sum-pr2 {
+    font-size: clamp(0.9rem, 2.8vw, 1.8rem);
+    padding-left: 8vw;
+
+    @media screen and (min-width: vars.$width1) {
+        font-size: clamp(0.9rem, 2.4vw, 1.8rem);
+    }
+
+    @media screen and (min-width: vars.$width3) {
+        padding-left: 3vw;
+    }
+}
