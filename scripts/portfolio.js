@@ -1,5 +1,8 @@
 document.addEventListener("DOMContentLoaded", async () => {
     /*
+
+    // Live Server - chemins absolus (à décommenter/commenter si besoin)
+
     try {
         // Insère le contenu de navbar.html dans l'élément <header>
         const navbarHtml = await fetch("/pages/components/navbar.html").then(response => response.text());
@@ -36,7 +39,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     }
 */
 
-    //  GitHub Pages
+    //  GitHub Pages - chemins relatifs ((à décommenter/commenter si besoin))
 
     try {
         // Insère le contenu de navbar.html dans l'élément <header>
