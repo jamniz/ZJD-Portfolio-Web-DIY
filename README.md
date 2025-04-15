@@ -1,6 +1,6 @@
 # MON PORTFOLIO WEB
 
-➡️ C'est par ici : ~~[ZJD - Portfolio Web](https://jamniz.github.io/ZJD-Portfolio-Web-DIY/)~~ 🚀 ou pas... 🤔
+➡️ C'est par ici : ??? 🚀 ou pas... 🤔 _(abandon déploiement sur GitHub Pages pour le moment...)_
 
 ![En cours...](<assets/under-construction-29051 - mod1.png>)
 ***
