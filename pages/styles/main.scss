@@ -1,11 +1,11 @@
-@use "../utils/_variables" as vars;
-@use "../utils/_mixins" as mix;
+@use "utils/_variables" as vars;
+@use "utils/_mixins" as mix;
 
-@forward "../components/_navbar";
-@forward "../components/_footer";
-@forward "../components/_carousel";
-@forward "../pages/_contact";
-@forward "../pages/_projets";
+@forward "components/_navbar";
+@forward "components/_footer";
+@forward "components/_carousel";
+@forward "_contact";
+@forward "_projets";
 
 
 .home-page {

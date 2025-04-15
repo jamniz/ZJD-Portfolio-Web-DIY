@@ -1,5 +1,5 @@
-@use "../utils/_variables" as vars;
-@use "../utils/_mixins" as mix;
+@use "utils/_variables" as vars;
+@use "utils/_mixins" as mix;
 
 .projets-page {
     @include mix.basic;
