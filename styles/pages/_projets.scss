@@ -15,6 +15,7 @@
     grid-row: 1/2;
     display: block;
     padding: 1.5rem 4rem;
+    // border: 2px solid red; // TEST
     margin: auto;
 
     p {
@@ -27,6 +28,7 @@
     grid-row: 2/3;
     margin: auto;
     padding: 2rem;
+    // border: 2px solid red; // TEST
 }
 
 .Btn-to-github {
@@ -67,6 +69,7 @@
 .pr-expo-2 {
     @include mix.grid-layout($columns: 1fr);
     border-radius: 15px 40px 15px 40px;
+    // border: 2px solid red; // TEST
     padding: 1.2rem;
     background-color: vars.$clr7;
     box-shadow: vars.$shadow4;
@@ -126,6 +129,7 @@
     font-size: clamp(1rem, 3vw, 2.4rem);
     padding-top: 6%;
     font-family: vars.$ff3;
+    // @include mix.hover-effect-scale(1.5);
 
     a {
         color: vars.$clr2;
