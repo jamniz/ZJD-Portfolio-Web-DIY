@@ -1,0 +1,20 @@
+{
+  "name": "web_portfolio_diy_v1",
+  "version": "1.0.0",
+  "description": "Mon Portfolio Web DIY v1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jamniz/ZJD-Portfolio-Web-DIY.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jamniz/ZJD-Portfolio-Web-DIY/issues"
+  },
+  "homepage": "https://github.com/jamniz/ZJD-Portfolio-Web-DIY#readme"
+}

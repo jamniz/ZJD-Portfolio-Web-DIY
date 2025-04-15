@@ -1,0 +1,54 @@
+[debug] [2025-04-15T22:44:10.983Z] ----------------------------------------------------------------------
+[debug] [2025-04-15T22:44:10.984Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\zd_al\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js emulators:start
+[debug] [2025-04-15T22:44:10.985Z] CLI Version:   14.1.0
+[debug] [2025-04-15T22:44:10.985Z] Platform:      win32
+[debug] [2025-04-15T22:44:10.985Z] Node Version:  v22.14.0
+[debug] [2025-04-15T22:44:10.985Z] Time:          Wed Apr 16 2025 00:44:10 GMT+0200 (heure d’été d’Europe centrale)
+[debug] [2025-04-15T22:44:10.985Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2025-04-15T22:44:11.160Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2025-04-15T22:44:11.160Z] > authorizing via signed-in user (alexx.zjd@gmail.com)
+[info] i  emulators: Starting emulators: hosting {"metadata":{"emulator":{"name":"hub"},"message":"Starting emulators: hosting"}}
+[debug] [2025-04-15T22:44:11.166Z] [logging] Logging Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-04-15T22:44:11.167Z] [hosting] Hosting Emulator only supports listening on one address (127.0.0.1). Not listening on ::1
+[debug] [2025-04-15T22:44:11.167Z] assigned listening specs for emulators {"user":{"hub":[{"address":"127.0.0.1","family":"IPv4","port":4400},{"address":"::1","family":"IPv6","port":4400}],"logging":[{"address":"127.0.0.1","family":"IPv4","port":4500}],"hosting":[{"address":"127.0.0.1","family":"IPv4","port":5000}]},"metadata":{"message":"assigned listening specs for emulators"}}
+[debug] [2025-04-15T22:44:11.170Z] [hub] writing locator at C:\Users\zd_al\AppData\Local\Temp\hub-portfolio-web-50183.json
+[debug] [2025-04-15T22:44:11.187Z] Checked if tokens are valid: false, expires at: 1744726802924
+[debug] [2025-04-15T22:44:11.187Z] Checked if tokens are valid: false, expires at: 1744726802924
+[debug] [2025-04-15T22:44:11.187Z] > refreshing access token with scopes: []
+[debug] [2025-04-15T22:44:11.189Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2025-04-15T22:44:11.189Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-15T22:44:11.269Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2025-04-15T22:44:11.269Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2025-04-15T22:44:11.276Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-web-50183/sites 
+[debug] [2025-04-15T22:44:12.118Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-web-50183/sites 200
+[debug] [2025-04-15T22:44:12.118Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/portfolio-web-50183/sites {"sites":[{"name":"projects/portfolio-web-50183/sites/portfolio-web-50183","defaultUrl":"https://portfolio-web-50183.web.app","type":"DEFAULT_SITE"}]}
+[debug] [2025-04-15T22:44:12.118Z] Checked if tokens are valid: true, expires at: 1744760650269
+[debug] [2025-04-15T22:44:12.119Z] Checked if tokens are valid: true, expires at: 1744760650269
+[debug] [2025-04-15T22:44:12.119Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-web-50183/webApps/-/config [none]
+[debug] [2025-04-15T22:44:12.602Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-web-50183/webApps/-/config 200
+[debug] [2025-04-15T22:44:12.602Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-web-50183/webApps/-/config {"projectId":"portfolio-web-50183","storageBucket":"portfolio-web-50183.firebasestorage.app","apiKey":"AIzaSyDdqSeTuJKw5qnU1LFPcDoLYpobiPGEQbY","authDomain":"portfolio-web-50183.firebaseapp.com","messagingSenderId":"454396333696"}
+[debug] [2025-04-15T22:44:12.609Z] Checked if tokens are valid: true, expires at: 1744760650269
+[debug] [2025-04-15T22:44:12.609Z] Checked if tokens are valid: true, expires at: 1744760650269
+[debug] [2025-04-15T22:44:12.610Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-web-50183 [none]
+[debug] [2025-04-15T22:44:12.797Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-web-50183 200
+[debug] [2025-04-15T22:44:12.797Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/portfolio-web-50183 {"projectId":"portfolio-web-50183","projectNumber":"454396333696","displayName":"Portfolio Web","name":"projects/portfolio-web-50183","resources":{"hostingSite":"portfolio-web-50183"},"state":"ACTIVE","etag":"1_ccb2c62c-58cd-4d50-86c8-bbd071b9e2c4"}
+[info] i  hosting[portfolio-web-50183]: Serving hosting files from: pages {"metadata":{"emulator":{"name":"hosting"},"message":"Serving hosting files from: \u001b[1mpages\u001b[22m"}}
+[info] +  hosting[portfolio-web-50183]: Local server: http://127.0.0.1:5000 {"metadata":{"emulator":{"name":"hosting"},"message":"Local server: \u001b[4m\u001b[1mhttp://127.0.0.1:5000\u001b[22m\u001b[24m"}}
+[warn] !  emulators: The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project. {"metadata":{"emulator":{"name":"hub"},"message":"The Emulator UI is not starting, either because none of the running emulators have a UI component or the Emulator UI cannot determine the Project ID. Pass the --project flag to specify a project."}}
+[debug] [2025-04-15T22:44:12.835Z] Could not find VSCode notification endpoint: FetchError: request to http://localhost:40001/vscode/notify failed, reason: . If you are not running the Firebase Data Connect VSCode extension, this is expected and not an issue.
+[info] 
+┌─────────────────────────────────────────────────────────────┐
+│ ✔  All emulators ready! It is now safe to connect your app. │
+└─────────────────────────────────────────────────────────────┘
+
+┌──────────┬────────────────┐
+│ Emulator │ Host:Port      │
+├──────────┼────────────────┤
+│ Hosting  │ 127.0.0.1:5000 │
+└──────────┴────────────────┘
+  Emulator Hub host: 127.0.0.1 port: 4400
+  Other reserved ports: 4500
+
+Issues? Report them at https://github.com/firebase/firebase-tools/issues and attach the *-debug.log files.
+ 
