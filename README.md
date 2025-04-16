@@ -1,8 +1,7 @@
 # MON PORTFOLIO WEB
 
-➡️ C'est par ici : ??? 🚀 ou pas... 🤔 _(abandon déploiement sur GitHub Pages pour le moment...)_
+➡️ C'est par ici : [Mon Portfolio - Développeur Web](https://portfolio-web-50183.web.app/) 🚀 
 
-![En cours...](<assets/under-construction-29051 - mod1.png>)
 ***
 #### Fonctionnalités :
 
